@@ -18,5 +18,9 @@ describe('Login page', () => {
     
     cy.get(':nth-child(10) > .help-block')
       .should('contain.text', 'Введіть пароль')
+
+    cy.get('h2.text-center')
+      .should('exist')
+      .and("contain.text", "Вхід")
   })
 })
