@@ -1,11 +1,12 @@
 /// <reference types="cypress" />
 
-describe('Empty email and password', () => {
-  it('The alert should apears if user try to loging with blank email and password fields', () => {
-    cy.viewport(1280, 720)
-    
+describe('Login page', () => {
+  beforeEach(() => {
     cy.visit('/')
+  });
 
+  it('The hints should appears if user try to logging with blank email and password fields', () => {
+    
     cy.get(':nth-child(9) > #loginButton')
       .click();
     
